@@ -1,20 +1,39 @@
 #include <iostream>
 using namespace std;
-//Classe com suas variáveis
+//Classe carro com variáveis do meu carro e método de buzinar.
 class Carro
 {
     public:
-    
     string Cor;
     string Modelo;
     float VelMax;
     void Buzinar ();
+    Carro()
+//Construtor personalizado.
+#include <iostream>
+using namespace std;
+//Classe carro com variáveis do meu carro e método de buzinar.
+class Carro
+{
+    public:
+    string Cor;
+    string Modelo;
+    float VelMax;
+    void Buzinar ();
+//Construtor personalizado.
+    Carro()
+{
+    VelMax = 220.f;
+    Modelo = "Camaro";
+    Cor = "Amarelo";
+}
     
 };
 //Iniciando meu programa, diretrizes das minhas varivais e modulo
 int main()
 {
     Carro MeuCarro;
+    Carro Carro2;
     
     MeuCarro.Cor = "Azul";
     MeuCarro.Modelo = "Fusca";
@@ -25,9 +44,15 @@ int main()
     cout << MeuCarro.VelMax << endl;
     cout << MeuCarro.Modelo << endl;
     
+    Carro2.Buzinar();
+    cout << Carro2.Cor << endl;
+    cout << Carro2.VelMax << endl;
+    cout << Carro2.Modelo << endl;
+    
 }
 //Impressão para meu usuário, a ação buzinar Bi Bi !!!.
 void Carro::Buzinar(){
     cout << "Bi, Bi!!!" << endl;
     
 }
+
